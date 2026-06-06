@@ -76,7 +76,7 @@
   /* Layout */
   .main{display:flex;flex:1 1 auto;min-height:0;}
   .stage-wrap{flex:1 1 auto;min-width:0;min-height:0;padding:14px;display:flex;align-items:center;justify-content:center;position:relative;}
-  .stage-col{flex:1 1 auto;align-self:stretch;min-width:0;min-height:0;display:flex;flex-direction:column;touch-action:none;}
+  .stage-col{flex:1 1 auto;align-self:stretch;min-width:0;min-height:0;display:flex;flex-direction:column;touch-action:none;position:relative;}
   .stage{
     flex:1 1 auto;min-height:0;min-width:0;position:relative;border-radius:var(--radius);
     overflow:hidden;background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);
@@ -257,6 +257,7 @@
       flex:0 0 auto;
     }
     .stage-col{width:100%;}
+    .stage-tools{position:static;transform:none;left:auto;right:auto;bottom:auto;margin:8px auto 2px;}
     canvas{max-height:46vh;}
     .stage-topbar{margin-bottom:9px;padding:9px 14px;font-size:.84rem;}
     .panel{flex:1 1 auto;width:100%;border-left:none;border-top:none;padding-top:18px;}
@@ -310,12 +311,12 @@
         <div class="stage-topbar" id="stageHint"></div>
         <div class="stage" id="stage">
           <canvas id="canvas"></canvas>
-          <div class="stage-tools" id="stageTools">
-            <button id="fbUndo">↶ Undo</button>
-            <button id="fbEnd" style="display:none;">✋ End</button>
-            <button id="fbFinalize">✓ Finalize</button>
-            <button id="fbClear">Clear</button>
-          </div>
+        </div>
+        <div class="stage-tools" id="stageTools">
+          <button id="fbUndo">↶ Undo</button>
+          <button id="fbEnd" style="display:none;">✋ End</button>
+          <button id="fbFinalize">✓ Finalize</button>
+          <button id="fbClear">Clear</button>
         </div>
       </div>
     </div>
